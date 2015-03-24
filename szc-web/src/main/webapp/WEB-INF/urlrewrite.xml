@@ -32,6 +32,10 @@
         <from>/app/plugin/**</from>
         <to>/plugin/$1</to>
     </rule>
+    <rule>
+        <from>/app/ng/**</from>
+        <to>/ng/$1</to>
+    </rule>
     <outbound-rule>
         <from>/app/**</from>
         <to>/$1</to>

@@ -1,1 +1,14 @@
+
+
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Simple app</title>
+    <script src="/ng/bower_components/angularjs/angular.js"></script>
+</head>
+<body>
+<input ng-model="name" type="text" placeholder="Your name">
+<h1>Hello {{ name }}</h1>
 hi,$user.phone
+</body>
+</html>
