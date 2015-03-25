@@ -7,21 +7,28 @@
 
     <resultMap id="resultMap" class="User">
         <result column="id" property="id" />
-        <result column="wx_id" property="wxId" />
+        <result column="uname" property="uname" />
+        <result column="passwd" property="passwd" />
+        <result column="ename" property="ename" />
+        <result column="email" property="email" />
         <result column="phone" property="phone" />
+        <result column="provinceid" property="provinceid" />
+        <result column="cityid" property="cityid" />
+        <result column="created" property="created" />
+        <result column="modified" property="modified" />
     </resultMap>
 
 
     <sql id="allField">
-        id,wx_id,phone
+        id,uname,passwd,ename,email,phone,provinceid,cityid,created,modified
     </sql>
 
     <insert id="save" parameterClass="User">
-        insert into db_user(
-            wx_id,phone
+        insert into user(
+           uname,passwd,ename,email,phone,provinceid,cityid,created,modified
             )
         values(
-            #wxId#,#phone#
+        #uname#,#passwd#,#ename#,#email#,#phone#,#provinceid#,#cityid#,now(),now()
         )
         <selectKey resultClass="int" keyProperty="id" >
             SELECT @@IDENTITY AS id
@@ -31,13 +38,13 @@
     <!--通用查询方法-->
     <select id="get" parameterClass="map" resultMap="resultMap">
         select <include refid="allField"/>
-        from db_user
+        from user
         <dynamic prepend="where">
             <isNotEmpty prepend="and" property="id">
                 id = #id#
             </isNotEmpty>
-            <isNotEmpty prepend="and" property="wxId">
-                wx_id = #wxId#
+            <isNotEmpty prepend="and" property="uname">
+                uname = #uname#
             </isNotEmpty>
         </dynamic>
     </select>

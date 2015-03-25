@@ -92,10 +92,10 @@
         <profile>
             <id>development</id>
             <properties>
-                <com.nsx.sendx.jdbc.url>jdbc:mysql://121.41.104.155:3306/sendx</com.nsx.sendx.jdbc.url>
+                <com.nsx.sendx.jdbc.url>jdbc:mysql://127.0.0.1:3306/kkw</com.nsx.sendx.jdbc.url>
                 <com.nsx.sendx.jdbc.encoding>UTF-8</com.nsx.sendx.jdbc.encoding>
-                <com.nsx.sendx.jdbc.user>sendx</com.nsx.sendx.jdbc.user>
-                <com.nsx.sendx.jdbc.password>nsx889OUge</com.nsx.sendx.jdbc.password>
+                <com.nsx.sendx.jdbc.user>root</com.nsx.sendx.jdbc.user>
+                <com.nsx.sendx.jdbc.password>123</com.nsx.sendx.jdbc.password>
                 <com.nsx.sendx.jdbc.initPoolSize>3</com.nsx.sendx.jdbc.initPoolSize>
                 <com.nsx.sendx.jdbc.maxPoolSize>3</com.nsx.sendx.jdbc.maxPoolSize>
                 <com.nsx.sendx.jdbc.showsql>true</com.nsx.sendx.jdbc.showsql>
